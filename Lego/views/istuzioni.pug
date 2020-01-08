@@ -1,0 +1,10 @@
+extends layout
+block content
+  header
+    h1 Ciaooo <!-- questo title va a prendere il title di index.js quindi poeti --> <!-- quello sotto è il nostro vettore di oggetti people: people_file.persone -->
+  hr
+  br
+  article
+    each l in lego  
+       h2 Istruzioni #{l.Istruzioni}
+       br
