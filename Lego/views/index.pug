@@ -1,16 +1,14 @@
 extends layout
+
 block content
-  header
-    h1 Ciaooo <!-- questo title va a prendere il title di index.js quindi poeti --> <!-- quello sotto è il nostro vettore di oggetti people: people_file.persone -->
-  hr
+  h1 #{title}
   br
   article
-    each l in lego 
-    
-       h2 Number: #{l.Number}
-       h2 Theme: #{l.Theme}
-       h2 Name: #{l.Name}
-       h2 Year: #{l.Year}
-       h2 Copertina: #{l.Copertina}
-       h2 Istruzioni#{l.Istruzioni}
-       br
+    each l in lego
+      div
+        img(src=`/img/${l.Copertina}`)
+        h2 #{l.Name}
+        h2 #{l.Theme}
+        h2 #{l.Year}
+        a(href=`/istruzioni/${l.Number}`) ciaoooo
+        hr
